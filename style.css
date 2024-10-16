@@ -1,0 +1,112 @@
+/*Navbar contents*/
+nav {
+    grid-area: nav;
+    background-color: white;
+
+    display: flex;
+}
+
+.nav-box {
+    height: 100%;
+    width: 25%;
+
+    transition: 0.5s background-color;
+
+    border-left: thin solid;
+    border-right: thin solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-box:hover {
+    background-color: gray;
+}
+/*---------------------------------------------------------*/
+/* Main Page */
+#mainContainer {
+    height: 200vh;
+    min-height: 200vh;
+    width: 190vh;
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 2fr 3fr 3fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav" 
+    "header header header header"
+    "video-container video-container aside aside"
+    "main main main main"
+    "footer footer footer footer";
+}
+
+#mainContainer header {
+    grid-area: header;
+    background-image: url(assets/mainHeader.jpg);
+    background-size: cover;
+    
+    color: ivory;
+    font-size: x-large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer .video-container {
+    grid-area:video-container;
+    background-color: darkslategrey;
+
+    color: ivory;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer iframe {
+    padding-top: 4%;
+
+    border:thin white;
+}
+
+#mainContainer aside {
+    grid-area: aside;
+    background-color: rgb(54, 54, 54);
+
+    color: ivory;
+    font-size: larger;
+
+    padding-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#mainContainer main {
+    grid-area: main;
+    background-color: white;
+
+    font-size: larger;
+
+    display: flex;
+    padding-top: 3%;
+}
+
+#mainContainer main img {
+    width: 50%;
+    height: 70%;
+
+    padding-right: 5%;
+}
+/*---------------------------------------------------------*/
+/* Footer contents*/
+footer {
+    grid-area: footer;
+    background-color: gray;
+
+    display: grid;
+    flex-direction: row;
+}
