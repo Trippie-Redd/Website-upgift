@@ -46,6 +46,8 @@ footer {
     margin: auto;
     padding: 0 20px;
     flex-wrap: wrap;
+
+    font-size: 14px;
 }
 
 .footer-section {
@@ -62,7 +64,6 @@ footer {
 
 .footer-section p, .footer-section a {
     color: #bfbfbf;
-    font-size: 14px;
     text-decoration: none;
 }
 
@@ -78,7 +79,6 @@ footer {
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
-    font-size: 14px;
     border-top: 1px solid #444;
     color: #999;
 }
@@ -98,7 +98,7 @@ footer {
     display: grid;
     
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 2fr 4fr 6fr 6fr 1fr;
+    grid-template-rows: 1fr 2fr 3fr 3fr 1fr;
     grid-template-areas:
     "nav nav nav nav" 
     "header header header header"
@@ -112,7 +112,7 @@ footer {
     background-image: url(assets/mainHeader.jpg);
     background-size: cover;
     
-    color: ivory;
+    color: black;
     font-size: x-large;
 
     display: flex;
@@ -172,6 +172,66 @@ footer {
 /*                      About us page                      */
 /*---------------------------------------------------------*/
 
+#infoContainer {
+    height: 200vh;
+    min-height: 200vh;
+    width: 190vh;
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav" 
+    "header header header header"
+    "main main aside1 aside1"
+    "aside2 aside2 main main"
+    "main main aside3 aside3"
+    "footer footer footer footer";
+}
+
+#infoContainer header {
+    background-color: yellow;
+    grid-area: header;
+}
+
+#infoMain {
+    background-color: blue;
+    grid-area: main;
+}
+
+#infoAside {
+    background-color: red;
+}
+
+    #aside1 {
+        grid-area: aside1;
+    }
+
+    #aside2 {
+        grid-area: aside2;
+    }
+
+    #aside3 {
+        grid-area: aside3;
+    }
+
+
 /*---------------------------------------------------------*/
 /*                    Get in touch page                    */
 /*---------------------------------------------------------*/
+
+#contactContainer {
+    height: 200vh;
+    min-height: 200vh;
+    width: 190vh;
+    display: grid;
+    
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 2fr 4fr 6fr 6fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav" 
+    "header header header header"
+    "video-container video-container aside aside"
+    "main main main main"
+    "footer footer footer footer";
+}
