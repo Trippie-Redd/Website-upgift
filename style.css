@@ -3,8 +3,11 @@
 /*---------------------------------------------------------*/
 
 nav {
+    height: 20vh;
+    min-height: 20vh;
+
     grid-area: nav;
-    background-color: white;
+    background-color: #CA5310;
 
     display: flex;
 }
@@ -14,6 +17,7 @@ nav {
     width: 25%;
 
     transition: 0.5s background-color;
+    background-color: #CA5310;
 
     border-left: thin solid;
     border-right: thin solid;
@@ -24,7 +28,7 @@ nav {
 }
 
 .nav-box:hover {
-    background-color: gray;
+    background-color: #8F250C;
 }
 
 /*---------------------------------------------------------*/
@@ -34,8 +38,9 @@ nav {
 footer {
     grid-area: footer;
 
-    background-color: #333;
+    background-color: #691E06;
     color: #fff;
+    border-top: 2px solid black;
     padding: 30px 0;
     width: 100%;
 }
@@ -72,19 +77,8 @@ footer {
 }
 
 .footer-section a:hover {
-    color: darkslategray;
+    color: #BB4D00;
     transition: color 0.5s;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #444;
-    color: #999;
-}
-
-.footer-bottom p {
-    margin: 0;
 }
 
 /*---------------------------------------------------------*/
@@ -94,7 +88,7 @@ footer {
 #mainContainer {
     height: 200vh;
     min-height: 200vh;
-    width: 190vh;
+    width: 100vw;
     display: grid;
     
     grid-template-columns: repeat(4,1fr);
@@ -109,10 +103,9 @@ footer {
 
 #mainContainer header {
     grid-area: header;
-    background-image: url(assets/mainHeader.jpg);
-    background-size: cover;
     
     color: black;
+    background-color: #FBBA72;
     font-size: x-large;
 
     display: flex;
@@ -122,7 +115,7 @@ footer {
 
 #mainContainer .video-container {
     grid-area:video-container;
-    background-color: darkslategrey;
+    background-color: #8F250C;
 
     color: ivory;
 
@@ -140,7 +133,7 @@ footer {
 
 #mainContainer aside {
     grid-area: aside;
-    background-color: rgb(54, 54, 54);
+    background-color: #CA5310;
 
     color: ivory;
     font-size: larger;
@@ -153,17 +146,23 @@ footer {
 
 #mainContainer main {
     grid-area: main;
-    background-color: white;
+    background-color: #FBBA72;
 
+    color: ivory;
     font-size: larger;
 
     display: flex;
     padding-top: 3%;
+    padding-left: 2%;
+
+    overflow-wrap: break-word;
 }
 
 #mainContainer main img {
-    width: 50%;
-    height: 70%;
+    width: 90%;
+    height: 90%;
+
+    border-radius: 10%;
 
     padding-right: 5%;
 }
@@ -173,65 +172,163 @@ footer {
 /*---------------------------------------------------------*/
 
 #infoContainer {
-    height: 200vh;
-    min-height: 200vh;
-    width: 190vh;
+    height: 150vh;
+    min-height: 150vh;
+    width: 100vw;
+    min-width: 100vw;
     display: grid;
     
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 4fr 1fr;
     grid-template-areas:
     "nav nav nav nav" 
     "header header header header"
-    "main main aside1 aside1"
-    "aside2 aside2 main main"
-    "main main aside3 aside3"
+    "images images images images"
+    "main main main main"
     "footer footer footer footer";
 }
 
 #infoContainer header {
-    background-color: yellow;
+    background-color: #FBBA72;
     grid-area: header;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#infoMain {
-    background-color: blue;
-    grid-area: main;
+#infoContainer #imgContainer {
+    background-color: #CA5310;
+    grid-area: images;
+
+    border-top: 2px solid #691E06;
+    padding-top: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#infoAside {
-    background-color: red;
+#infoContainer .person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-    #aside1 {
-        grid-area: aside1;
-    }
+#infoContainer img {
+    border-radius: 10%;
+}
 
-    #aside2 {
-        grid-area: aside2;
-    }
+#infoContainer main {
+    padding-left: 2%;
+    background-color: #FBBA72;
+    width: 100vw;
 
-    #aside3 {
-        grid-area: aside3;
-    }
-
+    border-top: 2px solid #691E06;
+    display: flex;
+    flex-direction: column;
+}
 
 /*---------------------------------------------------------*/
 /*                    Get in touch page                    */
 /*---------------------------------------------------------*/
 
 #contactContainer {
-    height: 200vh;
-    min-height: 200vh;
-    width: 190vh;
+    height: 180vh;
+    min-height: 180vh;
+    width: 100vw;
     display: grid;
     
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 2fr 4fr 6fr 6fr 1fr;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.1fr 1fr 0.2fr;
     grid-template-areas:
     "nav nav nav nav" 
-    "header header header header"
-    "video-container video-container aside aside"
     "main main main main"
     "footer footer footer footer";
+}
+
+#contactContainer main {
+    grid-area: main;
+    background-image: linear-gradient(180deg, #CA5310, #691E06);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contactContainer h1 {
+    padding-bottom: 5%;
+}
+
+#contactContainer #contactBox {
+    background-color: #CA5310;
+    border: #691E06 solid 2px;
+    border-radius: 5%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+    width: 40%;
+    height: 40%;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contactContainer hr {
+    border: 1px solid #691E06;
+    width: 50%;
+}
+
+#contactContainer .inputGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#contactContainer #contactBox button {
+    background-color: #8F250C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#contactContainer #contactBox button:hover {
+    background-color: #691E06;
+}
+
+/*---------------------------------------------------------*/
+/*                       Thanks page                       */
+/*---------------------------------------------------------*/
+
+#thankYou {
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 0.1fr 1fr 0.2fr;
+    grid-template-areas:
+    "nav nav nav nav" 
+    "main main main main"
+    "footer footer footer footer";
+}
+
+#thankYou main {
+    background-color: #FBBA72;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

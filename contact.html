@@ -10,10 +10,33 @@
     <div id="contactContainer">
         <nav>
             <button class="nav-box" type="button">Pixlstream</button>
-            <button class="nav-box" type="button">Home</button>
-            <button class="nav-box" type="button">About us</button>
-            <button class="nav-box" type="button">Get in touch</button>
+            <button class="nav-box" onclick="location.href='Main.html';" type="button">Home</button>
+            <button class="nav-box" onclick="location.href='info.html';" type="button">About us</button>
+            <button class="nav-box" onclick="location.href='contact.html';" type="button">Get in touch</button>
         </nav>
+        
+        <main>
+            <h1>Get in touch</h1>
+            <div id="contactBox">
+                <h2>Contact Us</h2>
+                <hr>
+                <form action="thankYou.html" >
+                    <div class="inputGroup">
+                        <label for="name:">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </main>
 
         <footer>
             <div class="footer-container">
@@ -24,24 +47,20 @@
                 <div class="footer-section links">
                     <h3>Useful Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Get in touch</a></li>
+                        <li><a href="Main.html">Home</a></li>
+                        <li><a href="info.html">About us</a></li>
+                        <li><a href="contact.html">Get in touch</a></li>
                     </ul>
                 </div>
                 <div class="footer-section social">
                     <h3>Follow Us</h3>
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i> Youtube</a></li>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://x.com/">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/">Youtube</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>On twinem im finna slide rn, fuck wrong wit u bitch</p>
-                <p>&copy; 2024 Pixlstream. All Rights Reserved.</p>
             </div>
         </footer>
     </div>
